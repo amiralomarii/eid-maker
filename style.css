@@ -1,0 +1,295 @@
+/* ========================================
+   Ultima Premium Eid Gift - Master Design
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Tajawal:wght@300;400;500;700;800&family=Aref+Ruqaa:wght@400;700&display=swap');
+
+:root {
+    /* Theme: Rose Navy (Default) */
+    --bg-dark: #02060e;
+    --bg-darker: #010307;
+    --accent-color: #e2a87c;
+    --accent-light: #f7d5b8;
+    --accent-dark: #b87b4b;
+    --bg-glow-1: rgba(30, 58, 138, 0.3);
+    --bg-glow-2: rgba(136, 19, 55, 0.15);
+    
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 180, 120, 0.25);
+    --islamic-opacity: 0.05;
+    
+    --white: #ffffff;
+    --white-soft: #e2e8f0;
+    --font-main: 'Tajawal', sans-serif;
+    --font-alt: 'Outfit', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.7);
+    --shadow-glow: 0 0 40px rgba(226, 168, 124, 0.2);
+}
+
+/* Theme: Gold Emerald (Classic) */
+body.theme-gold-emerald {
+    --bg-dark: #050a07;
+    --bg-darker: #020504;
+    --accent-color: #dfb14b;
+    --accent-light: #fce29f;
+    --accent-dark: #b8860b;
+    --bg-glow-1: rgba(20, 83, 45, 0.35);
+    --bg-glow-2: rgba(120, 53, 15, 0.15);
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(223, 177, 75, 0.25);
+}
+
+/* Base Styles */
+*, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html { 
+    scroll-behavior: smooth; 
+    font-size: 16px; 
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--bg-dark);
+    background-image: 
+        radial-gradient(circle at 80% 20%, var(--bg-glow-1), transparent 50%),
+        radial-gradient(circle at 20% 80%, var(--bg-glow-2), transparent 50%);
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--white);
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+    transition: background 0.6s ease;
+}
+
+/* Islamic Pattern Overlay */
+.islamic-pattern {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    opacity: var(--islamic-opacity);
+    pointer-events: none; z-index: 0;
+    filter: invert(1);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30l15-15-15-15-15 15 15 15zm0 0v15l15-15-15-15-15 15 15 15zm0 0h15L30 15 15 30l15 15h15z' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* Particle Scene */
+#particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.particle {
+    position: absolute; width: 3px; height: 3px; background: var(--accent-light);
+    border-radius: 50%; opacity: 0; box-shadow: 0 0 10px var(--accent-color);
+    animation: floatingUp 12s infinite linear;
+}
+@keyframes floatingUp {
+    0% { opacity: 0; transform: translateY(100vh) scale(0.5); }
+    20%, 80% { opacity: 0.6; }
+    100% { opacity: 0; transform: translateY(-10vh) scale(1.2); }
+}
+
+/* Perfect Centering Sections */
+.maker-section, .main-container {
+    position: relative; z-index: 10;
+    min-height: 100vh; min-height: 100dvh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+}
+
+.maker-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px; padding: 3.5rem 2.5rem;
+    width: 100%; max-width: 580px;
+    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
+    box-shadow: var(--shadow-soft), inset 0 0 0 1px rgba(255,255,255,0.05);
+    animation: cardEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    margin: auto; /* Fallback centering */
+}
+@keyframes cardEnter { from { opacity: 0; transform: scale(0.9) translateY(30px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+
+.maker-title { font-size: 2.2rem; font-weight: 800; text-align: center; color: var(--accent-light); margin-bottom: 0.5rem; }
+.maker-subtitle { font-size: 1.1rem; text-align: center; opacity: 0.6; margin-bottom: 3rem; }
+
+.form-group { margin-bottom: 2rem; width: 100%; }
+.form-group label { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; font-weight: 700; color: var(--accent-light); font-size: 1.1rem; }
+
+/* Input Styling */
+.maker-input {
+    width: 100%; padding: 1.2rem 1.5rem;
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px; color: #fff; font-family: inherit; font-size: 1.1rem;
+    transition: var(--transition-smooth);
+    appearance: none; -webkit-appearance: none;
+}
+select.maker-input option { background-color: #1a1a1a; color: #fff; padding: 15px; }
+select.maker-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: left 1.5rem center;
+    padding-left: 3.5rem;
+}
+[dir="rtl"] select.maker-input { background-position: right 1.5rem center; padding-right: 3.5rem; padding-left: 1.5rem; }
+
+.maker-input:focus { border-color: var(--accent-color); box-shadow: 0 0 25px rgba(226, 168, 124, 0.3); outline: none; background: rgba(0,0,0,0.6) !important; }
+
+.phone-input-group { display: flex; gap: 15px; width: 100%; }
+.country-select { flex: 0 0 145px; }
+.phone-main-input { flex: 1; }
+
+.generate-button {
+    width: 100%; padding: 1.4rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    border: none; border-radius: 18px; color: var(--bg-darker);
+    font-size: 1.3rem; font-weight: 800; cursor: pointer;
+    transition: var(--transition-smooth); margin-top: 1.5rem;
+    box-shadow: 0 15px 35px rgba(226, 168, 124, 0.4);
+}
+.generate-button:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(226, 168, 124, 0.6); }
+
+/* Result Hub */
+.result-container {
+    margin-top: 3rem; padding-top: 3rem;
+    border-top: 2px solid rgba(255,255,255,0.08);
+    display: flex; flex-direction: column; gap: 1.5rem;
+    transform-origin: top; animation: scaleIn 0.5s ease;
+}
+@keyframes scaleIn { from { opacity: 0; transform: scaleY(0.9); } to { opacity: 1; transform: scaleY(1); } }
+
+.share-actions { display: flex; flex-direction: column; gap: 15px; }
+.copy-box { display: flex; gap: 15px; }
+.copy-button { padding: 0 2rem; background: var(--accent-color); border: none; border-radius: 15px; font-weight: 800; cursor: pointer; transition: 0.3s; white-space: nowrap; font-size: 1.1rem; }
+.copy-button:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+.native-share-button {
+    width: 100%; padding: 1.2rem; background: rgba(255,255,255,0.08);
+    border: 2px solid var(--accent-color); border-radius: 18px; color: var(--accent-light);
+    font-size: 1.1rem; font-weight: 800; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 15px; transition: 0.3s;
+}
+.native-share-button:hover { background: var(--accent-color); color: var(--bg-darker); }
+
+.preview-button {
+    width: 100%; padding: 1.2rem; 
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-color); 
+    color: var(--accent-light);
+    border-radius: 18px; font-weight: 800; cursor: pointer; 
+    transition: var(--transition-smooth);
+    margin-top: 1.5rem;
+}
+.preview-button:hover { 
+    background: var(--accent-color); 
+    color: var(--bg-darker);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(226, 168, 124, 0.3);
+}
+
+/* Main Gift Interface */
+.hero { display: flex; flex-direction: column; align-items: center; gap: 2rem; width: 100%; animation: fadeIn 1s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.title {
+    font-size: clamp(2.5rem, 10vw, 4.5rem); font-weight: 800; text-align: center;
+    background: linear-gradient(180deg, #fff 40%, var(--accent-color));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.eidiya-button {
+    padding: 1.4rem 5rem; font-size: 1.5rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    border-radius: 100px; border: none; cursor: pointer; transition: 0.5s;
+    box-shadow: 0 20px 40px rgba(226, 168, 124, 0.4);
+}
+.eidiya-button:hover { transform: scale(1.08) translateY(-8px); box-shadow: 0 30px 60px rgba(226, 168, 124, 0.6); }
+
+/* Gift Reveal Card */
+.gift-reveal {
+    width: 100%; display: flex; flex-direction: column; align-items: center;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gift-card {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+    border-radius: 35px; padding: 3.5rem 2.5rem; width: 100%; max-width: 520px;
+    backdrop-filter: blur(50px); -webkit-backdrop-filter: blur(50px);
+    box-shadow: var(--shadow-soft); text-align: center; margin-bottom: 3rem;
+}
+
+.gift-image {
+    width: 100%; max-width: 320px; border-radius: 15px; margin: 0 auto;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6); display: block;
+    transition: 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+.gift-card:hover .gift-image { transform: scale(1.06) rotate(1deg); }
+
+.gift-amount {
+    font-size: clamp(2.2rem, 8vw, 3rem); font-weight: 800; margin-top: 2.5rem;
+    color: var(--accent-light); text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.personal-message {
+    text-align: center; margin: 2rem 0 3.5rem;
+    padding: 2.5rem 1.5rem; border-radius: 28px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    width: 100%; max-width: 480px;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.02);
+}
+.personal-message p { font-size: 1.1rem; opacity: 0.6; margin-bottom: 0.8rem; }
+
+.signature-name {
+    font-family: 'Aref Ruqaa', serif; font-size: clamp(3.5rem, 12vw, 5.5rem) !important;
+    background: linear-gradient(180deg, #fff, var(--accent-color));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    margin: 1rem 0; line-height: 1.4; padding-bottom: 0.8rem;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.action-buttons { 
+    display: flex; flex-direction: column; gap: 1.5rem; 
+    width: 100%; max-width: 440px; margin: 2rem auto 0; 
+    position: relative; z-index: 20; 
+}
+
+.app-credits {
+    margin-top: 4rem; font-size: 0.85rem; opacity: 0.35;
+    text-align: center; width: 100%; pointer-events: none;
+    letter-spacing: 0.5px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;
+}
+
+.try-again-button, .whatsapp-button {
+    width: 100%; padding: 1.3rem; border: none; border-radius: 20px;
+    font-size: 1.3rem; font-weight: 800; cursor: pointer; transition: 0.4s;
+    display: flex; align-items: center; justify-content: center; gap: 15px;
+}
+.try-again-button { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+.try-again-button:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
+
+.whatsapp-button { background: #25d366; color: #fff; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); }
+.whatsapp-button:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5); }
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    font-size: 2rem; animation: bounce 2s infinite; opacity: 0.7; pointer-events: none;
+}
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); } 40% { transform: translateY(-15px) translateX(-50%); } 60% { transform: translateY(-7px) translateX(-50%); } }
+
+/* Error/Empty Logic */
+.hidden { display: none !important; }
+
+/* Responsive Grid Fixes */
+@media (max-width: 600px) {
+    .maker-card, .gift-card { padding: 2.5rem 1.5rem; border-radius: 24px; }
+    .maker-section, .main-container { padding: 1.5rem 1rem; align-items: flex-start; padding-top: 4rem; }
+    .title { font-size: 2.4rem; }
+    .phone-input-group { flex-direction: column; }
+    .country-select { flex: auto; }
+}

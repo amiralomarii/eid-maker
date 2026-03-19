@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>عيدية أمير العُمري 🎁</title>
+    <meta name="title" content="عيدية أمير العُمري 🎁">
+    <meta name="description" content="كل سنة وانت طيب! خش جرب حظك واستلم عيديتك من أمير العُمري ✨">
+    <meta name="theme-color" content="#d4af37">
+
+    <!-- Open Graph / Facebook / WhatsApp / Snapchat -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="عيدية أمير العُمري 🎁">
+    <meta property="og:description" content="كل سنة وانت طيب! خش جرب حظك واستلم عيديتك من أمير العُمري ✨">
+    <meta property="og:image" content="20 dinar.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="عيدية أمير العُمري 🎁">
+    <meta property="twitter:description" content="كل سنة وانت طيب! خش جرب حظك واستلم عيديتك من أمير العُمري ✨">
+    <meta property="twitter:image" content="20 dinar.jpg">
+
+    <!-- Favicon (Emoji 🎁) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Container -->
+    <div id="particles"></div>
+
+    <!-- Islamic Pattern Overlay -->
+    <div class="islamic-pattern"></div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="star" style="--delay: 0s; --x: 10%; --y: 20%;"></div>
+        <div class="star" style="--delay: 1s; --x: 85%; --y: 15%;"></div>
+        <div class="star" style="--delay: 2s; --x: 70%; --y: 30%;"></div>
+        <div class="star" style="--delay: 0.5s; --x: 25%; --y: 60%;"></div>
+        <div class="star" style="--delay: 1.5s; --x: 90%; --y: 70%;"></div>
+        <div class="star" style="--delay: 2.5s; --x: 5%; --y: 80%;"></div>
+        <div class="star" style="--delay: 3s; --x: 50%; --y: 10%;"></div>
+        <div class="star" style="--delay: 0.8s; --x: 35%; --y: 85%;"></div>
+
+        <!-- Floating Lanterns -->
+        <div class="lantern" style="--delay: 0s; --x: 15%;"></div>
+        <div class="lantern" style="--delay: 2s; --x: 80%;"></div>
+        <div class="lantern" style="--delay: 4s; --x: 45%;"></div>
+    </div>
+
+
+
+    <!-- Maker Section (Setup) -->
+    <section id="makerSection" class="maker-section">
+        <div class="maker-card">
+            <h2 class="maker-title">اصنع عيديتك الخاصة 🎁</h2>
+            <p class="maker-subtitle">عبّي بياناتك وشارك الرابط مع أهلك وأصحابك</p>
+            
+            <div class="form-group">
+                <label for="userName"><span class="label-icon">👤</span> اسمك الكامل</label>
+                <input type="text" id="userName" placeholder="مثلاً: أمير العُمري" class="maker-input">
+            </div>
+
+            <div class="form-group">
+                <label for="userPhone"><span class="label-icon">📱</span> رقم الواتساب</label>
+                <div class="phone-input-group">
+                    <select id="countryCode" class="maker-input country-select">
+                        <option value="965">🇰🇼 +965</option>
+                        <option value="962">🇯🇴 +962</option>
+                        <option value="966">🇸🇦 +966</option>
+                        <option value="20">🇪🇬 +20</option>
+                        <option value="971">🇦🇪 +971</option>
+                        <option value="974">QA +974</option>
+                        <option value="968">OM +968</option>
+                        <option value="973">BH +973</option>
+                    </select>
+                    <input type="tel" id="userPhone" placeholder="رقم الهاتف" class="maker-input phone-main-input">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="userDialect"><span class="label-icon">🗣️</span> اللغة / اللهجة</label>
+                <select id="userDialect" class="maker-input">
+                    <option value="ar">العربية الفصحى (رسمي) 🌍</option>
+                    <option value="jo">الأردنية 🇯🇴</option>
+                    <option value="kw">الكويتية 🇰🇼</option>
+                    <option value="sa">السعودية 🇸🇦</option>
+                    <option value="eg">المصرية 🇪🇬</option>
+                    <option value="ps">الفلسطينية 🇵🇸</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="userTheme"><span class="label-icon">🎨</span> ستايل التصميم</label>
+                <select id="userTheme" class="maker-input">
+                    <option value="theme-rose-navy">أزرق ملكي وذهبي (Royal)</option>
+                    <option value="theme-gold-emerald">أخضر زمردي وذهبي (Classic)</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" class="generate-button">إنشاء الرابط السحري ✨</button>
+
+            <!-- Result Link (Hidden Initially) -->
+            <div id="resultContainer" class="result-container hidden">
+                <p>تم إنشاء رابطك بنجاح! انسخه وشاركه:</p>
+                <div class="share-actions">
+                    <div class="copy-box">
+                        <input type="text" id="shareLink" readonly class="maker-input">
+                        <button id="copyBtn" class="copy-button">نسخ الرابط</button>
+                    </div>
+                    <button id="nativeShareBtn" class="native-share-button">
+                        <span>إرسال عبر التطبيقات (واتساب، انستا...)</span>
+                        <span class="share-icon">📤</span>
+                    </button>
+                </div>
+                <button id="previewBtn" class="preview-button">معاينة العيدية الآن</button>
+            </div>
+
+            <!-- Maker Footnote -->
+            <footer class="app-credits">
+                حقوق التطوير والبرمجة محفوظة لـ أمير العُمري © 2026
+            </footer>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden Initially if Maker is active) -->
+    <main class="main-container hidden">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Crescent Moon -->
+            <div class="crescent-container">
+                <div class="crescent-moon">
+                    <div class="moon-glow"></div>
+                </div>
+            </div>
+
+            <h1 class="title">عيدية من أمير العُمري <span class="gift-emoji">🎁</span></h1>
+            <p class="subtitle">كل سنة وانتوا طيبين يا رب</p>
+
+            <!-- Eidiya Button -->
+            <button id="eidiyaBtn" class="eidiya-button">
+                <span class="btn-text">دوس هنا عشان تستلم العيدية</span>
+                <span class="btn-icon">💰</span>
+                <div class="btn-glow"></div>
+            </button>
+        </section>
+
+        <!-- Gift Reveal Section (Hidden Initially) -->
+        <section id="giftReveal" class="gift-reveal hidden">
+            <div class="gift-card">
+                <div class="gift-sparkles"></div>
+                <div class="gift-content">
+                    <div class="gift-icon">🎉</div>
+                    <h2 id="giftAmount" class="gift-amount"></h2>
+                    <div class="gift-decoration"></div>
+                    <p class="fake-money-warning">دي مجرد صورة، مفيش فلوس بجد 😂</p>
+                </div>
+            </div>
+
+            <!-- Personal Message -->
+            <div class="personal-message">
+                <p>هذه العيدية مقدمة لكم من</p>
+                <h3 class="signature-name">أمير العُمري</h3>
+                <p class="blessing">كل سنة وانتوا بصحة وسعادة 🤍</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <!-- Try Again Button -->
+                <button id="tryAgainBtn" class="try-again-button">
+                    <span>جرب حظك تاني</span>
+                    <span>🎲</span>
+                </button>
+                
+                <!-- WhatsApp Share Button -->
+                <button id="whatsappShareBtn" class="whatsapp-button">
+                    <span>ابعت لـ أمير طلعلك كام</span>
+                    <span class="wa-icon" style="display:flex; align-items:center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- App Footnote -->
+            <footer class="app-credits">
+                حقوق التطوير والبرمجة محفوظة لـ أمير العُمري © 2026
+            </footer>
+        </section>
+
+        <!-- Scroll Indicator -->
+        <div id="scrollIndicator" class="scroll-indicator hidden" aria-label="Scroll Down">
+            <span>👇</span>
+        </div>
+    </main>
+
+    <!-- Confetti Container -->
+    <div id="confetti"></div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
