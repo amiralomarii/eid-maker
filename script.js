@@ -212,6 +212,9 @@ generateBtn.addEventListener('click', () => {
         // Update current local config to preview
         config = { name, phone, dialect, theme };
         
+        // Dynamic Page Updates
+        applyConfig();
+        
         setTimeout(() => {
             generateBtn.textContent = "إنشاء الرابط السحري ✨";
         }, 3000);
