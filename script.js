@@ -236,7 +236,7 @@ copyBtn.addEventListener('click', () => {
 nativeShareBtn.addEventListener('click', async () => {
     const shareData = {
         title: `عيدية ${config.name} 🎁`,
-        text: `كل سنة وانت طيب! شوف عيديتك من ${config.name} هنا:`,
+        text: `كل عام وأنتم بخير! شاهد عيديتك من ${config.name} هنا:`,
         url: shareLinkInput.value
     };
 
